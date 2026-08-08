@@ -27,7 +27,7 @@ export async function createUser(req, res) {
 		const existingUser = await User.findOne({ email: data.email });
 		if (existingUser) {
 			return res.status(409).json({
-				message: "Email already registered. Please use a different email or try logging in."
+				message: "Email already registered. Please use an other email or try logging in."
 			});
 		}
 
